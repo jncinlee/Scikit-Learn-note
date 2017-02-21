@@ -15,6 +15,9 @@ knn.fit(Xtrain,Ytrain)
 print(knn.predict(Xtest))
 print(Ytest)
 
+###alternative
+#write yourself define distance
+
 
 
 ##5 Datasets Regression
@@ -70,7 +73,7 @@ random_state=22,scale=100)
 plt.scatter(X[:,0],X[:,1],c=y)
 plt.show()
 
-#X= preprocessing.minmax_scale(X,feature_range=(0,1)) #複雜板
+#X= preprocessing.minmax_scale(X,feature_range=(0,1)) #複雜板
 X = preprocessing.scale(X)
 Xtrain,Xtest,Ytrain,Ytest=train_test_split(X,y,test_size=.3)
 clf=SVC()
