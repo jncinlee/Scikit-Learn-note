@@ -37,6 +37,12 @@ plt.show()
 plt.savfig('c:/user/lala.png', format='png')
 plt.xkcd() #different hand-write style plot
 
+###alternative solution X, y data
+from scipy import stats
+slope, intercept, rSquare, pValue, std = stats.linregress(X,y) #find coefficient from LR
+np.polyfit(X,y,4) #could fit the data of 4 degree polyline
+
+
 
 ##6 Model
 print(lr.coef_)   #斜率
