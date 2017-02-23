@@ -34,7 +34,7 @@ print(lr.predict(bosX[:4,:]))
 print(bosY[:4])
 
 X,y = datasets.make_regression(n_samples=100,n_features=1,n_targets=1,noise=10)
-#用來生data
+#to generate data
 plt.scatter(X,y)
 plt.show()
 plt.savfig('c:/user/lala.png', format='png')
@@ -48,10 +48,10 @@ np.polyfit(X,y,4) #could fit the data of 4 degree polyline
 
 
 ##6 Model
-print(lr.coef_)   #斜率
-print(lr.intercept_) #截距
-print(lr.get_params()) #定義的參數
-print(lr.score(bosX,bosY)) #R^2 看這個回歸多少多好
+print(lr.coef_)   #斜率slope
+print(lr.intercept_) #截距intercept
+print(lr.get_params()) #定義的參數defined parameter
+print(lr.score(bosX,bosY)) #R^2 看這個回歸多少多好goodness of fit
 
 
 
@@ -73,7 +73,7 @@ random_state=22,scale=100)
 plt.scatter(X[:,0],X[:,1],c=y)
 plt.show()
 
-#X= preprocessing.minmax_scale(X,feature_range=(0,1)) #複雜板
+#X= preprocessing.minmax_scale(X,feature_range=(0,1)) #complex version
 X = preprocessing.scale(X)
 Xtrain,Xtest,Ytrain,Ytest=train_test_split(X,y,test_size=.3)
 clf=SVC()
