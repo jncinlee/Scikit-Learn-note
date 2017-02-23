@@ -16,7 +16,7 @@ print(knn.predict(Xtest))
 print(Ytest)
 
 ###alternative
-#write yourself define distance
+#write yourself define distance, could decide number of k and cluster
 
 
 
