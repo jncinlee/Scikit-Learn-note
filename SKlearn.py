@@ -164,7 +164,7 @@ plt.show()
 
 
 
-##11 保存model
+##11 keep model
 from sklearn import svm
 
 clf = svm.SVC()
@@ -172,21 +172,21 @@ iris = datasets.load_iris()
 X,y = iris.data, iris.target
 clf.fit(X,y)
 
-#method1:保存pickle
+#method1: keep as pickle
 import pickle
 with open('save/clf.pickle','wb') as f:
     pickle.dump(clf,f)
-#島出
+#output
 with open('save/clf.pickle','rb') as f:
     clf2=pickle.load(f)
     print(clf2.predict(X[0:1]))
 
 
 
-#method2: joblib 跑比較多.pkl文件
+#method2: joblib generate more .pkl文件
 from sklearn.externals import joblib
 joblib.dump(clf,'save/clf.pkl')
-#島出
+#output
 clf3 = joblib.load('save/clf.pkl')
 print(clf3.predict(X[0:1]))
 
