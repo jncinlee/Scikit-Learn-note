@@ -99,7 +99,7 @@ scores=cross_val_score(knn,XX,YY,cv=5,scoring='accuracy') #自動分五組
 print(scores.mean()) #平均後比較準
 
 
-#看不同neighbor大小
+#看不同neighbor大小inspect size of neighbor
 
 k_range=range(1,31)
 k_scores=[]
